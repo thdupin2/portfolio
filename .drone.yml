@@ -5,6 +5,3 @@ name: CI
 trigger:
   event:
     - push
-
-steps:
- - name: code-analysis
