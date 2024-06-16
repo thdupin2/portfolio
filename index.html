@@ -8,14 +8,21 @@
     <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- --------- -->
+
+    <!-- AOS (Animate on Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- ---------------------- -->
 </head>
 <body>
+    
     <header class="header">
-        
-
         <input type="checkbox" id="check">
         <label for="check" class="icons">
             <i class='bx bx-menu' id="menu-icon"></i>
@@ -24,7 +31,7 @@
 
         <nav class="header-nav">
             <a href="#" class="logo">Accueil</a>
-            <a href="#about-me" style="--i:0">A propos de moi</a>
+            <a href="#about-me" style="--i:0">À propos de moi</a>
             <a href="#" style="--i:1">Compétences</a>
             <a href="#" style="--i:2">Alternance</a>
         </nav>
@@ -44,23 +51,31 @@
             <div class="sub-text">
                 <div class="row align-items-center">
                     <div class="col-auto">
-                        <a class="btn btn-dark btn-round" href="https://github.com/thdupin2" target="_blank" role="button"><i class="bi bi-github btn-icon"> Github </i></a>
-                    </div>
-                    <div class="col">
-                        <a class="btn btn-light btn-round" href="#" role="button" id="copyEmail">
-                            <i class="bi bi-envelope-at btn-icon"> Copier l'email</i>
+                        <a class="btn btn-primary btn-round" href="https://www.linkedin.com/in/th%C3%A9o-dupin-a81a34257/" target="_blank" role="button">
+                            <i class="bi bi-linkedin btn-icon"> Linkedin</i>
                         </a>
-                        <div id="notification" class="notification">
-                            Copié !
-                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <a class="btn btn-dark btn-round" href="https://github.com/thdupin2" target="_blank" role="button">
+                            <i class="bi bi-github btn-icon"> Github </i>
+                        </a>
+                    </div>
+                    <div class="col-auto">
+                        <a class="btn btn-light btn-round" style="display: flex; align-items: center; gap: 5px; font-size: 20px;" href="#" role="button" id="openGmail">
+                            <img src="assets/gmail.png" style="width: 20px; height: 20px;"> Gmail
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+        <div class="wave wave3"></div>
+        <div class="wave wave4"></div>
     </section>
 
     <section class="container-about-me" id="about-me">
-        <h1>A propos de moi</h1>
+        <h1 data-aos="zoom-in">A propos de moi</h1>
         <!-- Ajoutez ici des informations supplémentaires sur vous -->
     </section>
     

@@ -1,24 +1,11 @@
 // EMAIL
-document.getElementById('copyEmail').addEventListener('click', function() {
+document.getElementById('openGmail').addEventListener('click', function() {
     var email = 'theo.dupin03300.pro@gmail.com';
-    navigator.clipboard.writeText(email).then(function() {
-        showNotification();
-        $('.alert').alert('Impossible de copier l\'adresse e-mail');
-    }, function() {
-        $('.alert').alert('Impossible de copier l\'adresse e-mail');
-    });
-});
+    var gmailLink = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + email;
 
-function showNotification() {
-    var notification = document.getElementById('notification');
-    notification.classList.add('show');
-    setTimeout(function() {
-        notification.classList.add('hide');
-        setTimeout(function() {
-            notification.classList.remove('show', 'hide');
-        }, 500); // Corresponds to the hide transition duration
-    }, 2500); // Change the duration as needed
-}
+    // Essayer d'ouvrir le lien Gmail
+    window.open(gmailLink, '_blank');
+});
 
 document.addEventListener('DOMContentLoaded', function() {
     var aboutMeLink = document.querySelector('.header-nav a[href="#about-me"]');
@@ -28,3 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
         aboutMeSection.scrollIntoView({ behavior: 'smooth' }); // Fait défiler la page jusqu'à la section "À propos de moi" en douceur
     });
 });
+
+// AOS
+AOS.init();
