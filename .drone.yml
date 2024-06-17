@@ -1,7 +1,16 @@
 kind: pipeline
 type: docker
-name: CI
+name: CD
 
 trigger:
   event:
     - push
+
+# container deployment
+- name: deploy-container
+  image: hub.codefirst.iut.uca.fr/thomas.bellembois/codefirst-dockerproxy-clientdrone:latest
+  environment:
+      IMAGENAME: hub.codefirst.iut.uca.fr/theo.dupin/Portfolio:latest
+      CONTAINERNAME: portfolio_container
+      COMMAND: create
+      OVERWRITE: true
