@@ -7,14 +7,14 @@
 //     window.open(gmailLink, '_blank');
 // });
 
-document.addEventListener('DOMContentLoaded', function() {
-    var aboutMeLink = document.querySelector('.header-nav a[href="#about-me"]');
-    aboutMeLink.addEventListener('click', function(event) {
-        event.preventDefault(); // Empêche le comportement par défaut du lien
-        var aboutMeSection = document.getElementById('about-me');
-        aboutMeSection.scrollIntoView({ behavior: 'smooth' }); // Fait défiler la page jusqu'à la section "À propos de moi" en douceur
-    });
-});
+// document.addEventListener('DOMContentLoaded', function() {
+//     var aboutMeLink = document.querySelector('.header-nav a[href="#about-me"]');
+//     aboutMeLink.addEventListener('click', function(event) {
+//         event.preventDefault(); // Empêche le comportement par défaut du lien
+//         var aboutMeSection = document.getElementById('about-me');
+//         aboutMeSection.scrollIntoView({ behavior: 'smooth' }); // Fait défiler la page jusqu'à la section "À propos de moi" en douceur
+//     });
+// });
 
-// AOS
-AOS.init();
+// // AOS
+// AOS.init();
