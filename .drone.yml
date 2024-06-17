@@ -6,7 +6,6 @@ trigger:
   event:
     - push
 
-# container deployment
 - name: deploy-container
   image: hub.codefirst.iut.uca.fr/thomas.bellembois/codefirst-dockerproxy-clientdrone:latest
   environment:
