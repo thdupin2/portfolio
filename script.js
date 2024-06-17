@@ -1,4 +1,3 @@
-// EMAIL
 document.getElementById('openGmail').addEventListener('click', function() {
     var email = 'theo.dupin03300.pro@gmail.com';
     var gmailLink = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + email;
@@ -16,5 +15,4 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// AOS
 AOS.init();
