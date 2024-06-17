@@ -11,6 +11,6 @@ steps:
     image: hub.codefirst.iut.uca.fr/thomas.bellembois/codefirst-dockerproxy-clientdrone:latest
     environment:
         IMAGENAME: hub.codefirst.iut.uca.fr/theo.dupin/portfolio:latest
-        CONTAINERNAME: portfolio_container
+        CONTAINERNAME: portfolio
         COMMAND: create
         OVERWRITE: true
