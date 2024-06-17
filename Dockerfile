@@ -6,6 +6,8 @@ RUN mkdir -p /usr/share/nginx/html
 # Copie le contenu de ton site web dans le répertoire par défaut de Nginx
 COPY . /usr/share/nginx/html
 
+RUN chmod -R 755 /usr/share/nginx/html
+
 # Expose le port 80 pour que le serveur web soit accessible
 EXPOSE 80
 
