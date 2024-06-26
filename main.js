@@ -7,6 +7,11 @@ document.getElementById('openGmail').addEventListener('click', function() {
     window.open(gmailLink, '_blank');
 });
 
+// CV
+document.getElementById('downloadButton').addEventListener('click', function() {
+    document.getElementById('downloadCV').click();
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     var aboutMeLink = document.querySelector('.header-nav a[href="#about-me"]');
     aboutMeLink.addEventListener('click', function(event) {
