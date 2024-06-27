@@ -8,6 +8,7 @@
     <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -30,9 +31,8 @@
         </label>
 
         <nav class="header-nav">
-            <a href="#" class="logo">Accueil</a>
             <a href="#about-me" style="--i:0">À propos de moi</a>
-            <a href="#" style="--i:1">Compétences</a>
+            <a href="#skills" style="--i:1">Compétences</a>
             <a href="#" style="--i:2">Projets</a>
             <a href="#" style="--i:3">Alternance</a>
         </nav>
@@ -108,7 +108,59 @@
         </div>
         <div style="width: 80%;">
             <a id="downloadCV" href="assets/CV_Théo_Dupin.pdf" download="CV_Théo_Dupin.pdf" style="display:none;"></a>
-            <button type="button" class="btn btn-dark" style="padding: 12px;" id="downloadButton">Téléchargez mon CV</button>
+            <button type="button" class="btn btn-dark" style="padding: 12px;" id="downloadButton">Télécharger mon CV</button>
+        </div>
+    </section>
+
+    <section class="container-skills" id="skills">
+        <div>
+            <h1>Compétences</h1>
+            <hr style="width: 50%; margin: 0 auto; border: 1px solid #000;">
+        </div>
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <h4>Languages de programmation</h4>
+            <div class="skills-content">
+                <span class="badge" style="background-color: #e34c26;"><i class="fab fa-html5"></i> HTML</span>
+                <span class="badge" style="background-color: #264de4;"><i class="fab fa-css3-alt"></i> CSS</span>
+                <span class="badge" style="background-color: #f0db4f; color: black;"><i class="fab fa-js"></i> JavaScript</span>
+                <span class="badge" style="background-color: #3178C6; color: black;"><img src="assets/typescript.png"> Typescript</span>
+                <span class="badge python" style="background-color: #626567;"><img src="assets/python.png"> Python</span>
+                <span class="badge" style="background-color: #563d7c;"><i class="fab fa-php"></i> &nbsp; PHP</span>
+                <span class="badge" style="background-color: #4eaa25;"><i class="fas fa-terminal"></i> &nbsp; Bash</span>
+                <span class="badge" style="background-color: #f29111;"><i class="fas fa-database"></i> SQL</span>
+                <span class="badge" style="background-color: #00599c;"><i class="fab fa-cuttlefish"></i> C/C++/C#</span>
+                <span class="badge" style="background-color: #b2afaf; color: #F44336;"><img src="assets/java.png"> Java</span>
+                <span class="badge" style="background-color: #0095d5; background-image: linear-gradient(135deg, #0095d5 0%, #00c4cc 50%, #00c4cc 50%, #e44857 50%, #e44857 100%);"><img src="assets/kotlin.png"> Kotlin</span>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <h4>Frameworks / Bibliothèques / ORM</h4>
+            <div class="skills-content">
+                <span class="badge" style="background-color: #dd0031;"><i class="fab fa-angular"></i> Angular</span>
+                <span class="badge" style="background-color: black;"><img src="assets/nestjs.png"> NestJS</span>
+                <span class="badge" style="background-color: #61dafb; color: black;"><i class="fab fa-react"></i> React</span>
+                <span class="badge" style="background-color: #68a063;"><i class="fab fa-node-js"></i> Node.js</span>
+                <span class="badge" style="background-color: gray;"><img src="assets/typeorm.png"> TypeORM</span>
+                <span class="badge" style="background-color: black;"><i class="fab fa-symfony"></i> Symfony</span>
+                <span class="badge" style="background-color: #0C4B33;"><img src="assets/django.png"> Django</span>
+                <span class="badge" style="background: linear-gradient(135deg, #FF5D5D, #C35355, #8A494E);"><img src="assets/streamlit.png"> Streamlit</span>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <h4>Bases de données</h4>
+            <div class="skills-content">
+                <span class="badge" style="background-color: #326790;"><img src="assets/postgresql.png"> PostgreSQL</span>
+                <span class="badge" style="background-image: linear-gradient(135deg, #0071BC 50%, #E48E00 50%);"><img src="assets/mysql.png"> MySQL</span>
+                <span class="badge" style="background-color: #689F38;"><img src="assets/mongodb.png"> MongoDB</span>
+                <span class="badge" style="background-color: #003B57"><img src="assets/sqlite.png"> SQLite</span>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <h4>Gestion de projets</h4>
+            <div class="skills-content">
+                <span class="badge" style="background-color: #FF5733;"><img src="assets/scrum.png"> SCRUM</span>
+                <span class="badge" style="background-color: #F2C94C"><img src="assets/kanban.png"> KANBAN</span>
+            </div>
         </div>
     </section>
 
@@ -123,6 +175,8 @@
             </div>
         </div>
     </footer>
+
+    <button onclick="topFunction()" id="button-top" title="Go to top"><i class="fas fa-arrow-up"></i></button>
 
     <script src="main.js"></script>
 </body>

@@ -34,7 +34,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(2px);
     z-index: -1;
 }
@@ -226,7 +226,88 @@ section .wave.wave4 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
     text-align: justify;
 }
+/* ************ */
+/* SKILLS */
+.container-skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: black;
+    gap: 40px;
+}
 
+.skills-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 80%; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    text-align: justify;
+}
+
+.badge {
+    width: auto;
+    height: 25px;
+    background-color: #e0e0e0;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 20px;
+    display: inline-block;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.badge i,
+.badge img {
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
+    vertical-align: middle; /* Ajustement de l'alignement vertical pour une meilleure présentation */
+}
+
+.badge:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#button-top {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background: linear-gradient(to bottom, #3498DB , #34495E);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 18px;
+    text-align: center; /* Pour centrer le contenu */
+    line-height: 0; /* Supprime l'espacement interne par défaut */
+    transition: background-color 0.3s; /* Animation de transition */
+  }
+  
+  #button-top:hover {
+    background-color: black;
+    color: white;
+  }
+  
+  #button-top i {
+    font-size: 18px;
+    display: block; /* Assure que l'icône se comporte comme un bloc */
+    margin: auto; /* Centre l'icône horizontalement */
+  }
+  
+  /* Pour cacher le bouton au chargement de la page */
+  #button-top.hidden {
+    display: none;
+  }
 
 @keyframes blink {
     0%, 100% {
