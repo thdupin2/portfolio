@@ -54,6 +54,64 @@ section {
     left: 100%;
 }
 
+.swiper {
+    width: 80%;
+    height: 50%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+    align-items: center;
+    padding: 50px;
+}
+
+.image {
+    width: 100%;
+    height: 300px;
+    max-height: 300px;
+    max-width: 300px;
+    border-radius: 20px;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%; /* S'assure que la hauteur de la colonne est pleine */
+}
+
+.description {
+    text-align: justify;
+    width: 95%;
+}
+
+.logos {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    align-items: flex-end; /* Aligne les logos en bas */
+}
+
+.logos img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain; /* Ajuste l'image pour qu'elle s'adapte sans déformation */
+}
+
+.repo-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background: linear-gradient(to bottom, #3498DB , #34495E);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    text-align: center;
+}
+
 /* ACCUEIL */
 .logo {
     font-size: 2rem;
@@ -212,19 +270,24 @@ section .wave.wave4 {
 /* ************ */
 /* ME */
 .container-about-me {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    color: black;
-    gap: 10px;
+    display: grid;
+    padding-top: 80px;
+    padding-bottom: 20px;
+    place-items: center;
 }
 
 .about-me-content {
-    width: 80%; 
+    width: 80%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
     text-align: justify;
+    max-width: 1200px;
+}
+
+.download-button-CV {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80%;
 }
 /* ************ */
 /* SKILLS */
@@ -247,6 +310,43 @@ section .wave.wave4 {
     width: 80%; 
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
     text-align: justify;
+}
+
+.skills-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.skills-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills-grid > div:nth-child(1) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills-grid > div:nth-child(n+2) {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.skills-grid > div:nth-child(n+2) .skills-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .badge {
@@ -291,23 +391,55 @@ section .wave.wave4 {
     text-align: center; /* Pour centrer le contenu */
     line-height: 0; /* Supprime l'espacement interne par défaut */
     transition: background-color 0.3s; /* Animation de transition */
-  }
-  
-  #button-top:hover {
+}
+
+#button-top:hover {
     background-color: black;
     color: white;
-  }
-  
-  #button-top i {
+}
+
+#button-top i {
     font-size: 18px;
     display: block; /* Assure que l'icône se comporte comme un bloc */
     margin: auto; /* Centre l'icône horizontalement */
-  }
-  
-  /* Pour cacher le bouton au chargement de la page */
-  #button-top.hidden {
+}
+
+/* Pour cacher le bouton au chargement de la page */
+#button-top.hidden {
     display: none;
-  }
+}
+/* ************ */
+
+/* PROJECTS */
+.container-projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: black;
+    gap: 40px;
+}
+
+/* Custom scrollbar styles */
+.grid-container::-webkit-scrollbar {
+    width: 12px;
+}
+
+.grid-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.grid-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.grid-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+/* ************ */
 
 @keyframes blink {
     0%, 100% {
@@ -325,6 +457,42 @@ section .wave.wave4 {
 }
 
 /* BREAKPOINTS */
+@media (max-width: 1024px) {
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: 1fr;
+        overflow-y: auto; /* Enable vertical scrolling */
+        max-height: 600px;
+        gap: 10px;
+    }
+
+    .grid-container img {
+        width: 100%;
+        height: 200px;
+        max-height: 200px;
+        max-width: 200px;
+        border-radius: 20px;
+    }
+
+    .content-container h2 {
+        font-size: 1.5em;
+    }
+
+    .content-container p {
+        font-size: 1em;
+    }
+
+    .logos img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .repo-button {
+        font-size: 0.9em;
+    }
+}
+
 @media (max-width: 992px) {
     .header {
         padding: 1.3rem 5%;
@@ -397,6 +565,10 @@ section .wave.wave4 {
         font-size: 6vw;
     }
 
+    .container-about-me {
+        grid-template-columns: 1fr;
+    }
+
     .about-me-content {
         font-size: 11px;
     }
@@ -431,6 +603,29 @@ section .wave.wave4 {
 
     .about-me-content {
         font-size: 10px;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+        overflow-y: auto;
+        max-height: 300px;
+    }
+
+    .content-container h2 {
+        font-size: 1em;
+    }
+
+    .content-container p {
+        font-size: 0.8em;
+    }
+
+    .logos img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .repo-button {
+        font-size: 0.7em;
     }
 }
 
